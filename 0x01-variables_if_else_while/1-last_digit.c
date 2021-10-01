@@ -23,7 +23,7 @@ int main()
 	}
 	else if (n % 10 == 4)
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10 );
+		printf("Last digit of %d is %d and is less than 9 and not 0\n", n, n % 10 );
 	}
 
 	return (0);
