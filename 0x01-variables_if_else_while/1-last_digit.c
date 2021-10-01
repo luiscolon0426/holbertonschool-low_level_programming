@@ -19,7 +19,7 @@ int main()
 	}
 	else if (n % 10 == 0)
 	{
-		printf("The Last digit of %d is %d,\n", n, n % 10);
+		printf("The Last digit of %d is %d,and is 0\n", n, n % 10);
 	}
 	else if (n % 10 == 4)
 	{
