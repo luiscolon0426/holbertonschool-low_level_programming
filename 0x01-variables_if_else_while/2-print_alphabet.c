@@ -1,9 +1,18 @@
 #include  <stdio.h>
 /**
  * main - function
- * Return: 0 
+ * Return: 0
  */
+int main(void)
+{
+	int ch;
 
-int ch;
-  for (ch= ‘A’; ch<= ‘Z’; ch++)
+	for (ch = ‘a’; ch < = ‘z’; ch++)
+	{
+		putchar(ch);
+	}
+	puthcar('\n');
+	return (0);
+}
+
 
