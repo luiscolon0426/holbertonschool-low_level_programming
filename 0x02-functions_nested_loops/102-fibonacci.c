@@ -13,7 +13,7 @@ int main(void)
 	{
 
 		sum = fib1 + fib2;
-		if (count == 50)
+		if (count == 49)
 		{
 			printf("%lu", sum);
 		}
