@@ -14,7 +14,7 @@
 
  - Don't add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
  - You do not have to compile with -Wall -Werror -Wextra -Pendantic for this task. Your output should look likes this:
-
+'''
 carrie@ubuntu:/debugging$ gcc -std=gnu89 1-main.c -o 1-main
 carrie@ubuntu:/debugging$ ./1-main
 Infinite loop incoming :(
@@ -22,4 +22,4 @@ Infinite loop avoided! \o/
 carrie@ubuntu:/debugging$ wc -l 1-main.c
 24 1-main.c
 carrie@ubuntu:/debugging$
- 
+''' 
