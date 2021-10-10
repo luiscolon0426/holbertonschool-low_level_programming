@@ -13,19 +13,9 @@
 1. Copy this main file. Comment out (dont delete it!) the part code that is causing the output to go into an infinite loop.
 
  - Don't add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
- - You do not have to compile with -Wall -Werror -Wextra -Pendantic for this task. Your output should look likes this:
+ - You do not have to compile with -Wall -Werror -Wextra -Pendantic for this task.
 
-'''
-carrie@ubuntu:/debugging$ gcc -std=gnu89 1-main.c -o 1-main
+2. This program prints the largest of three integers. Fix the code in *2-largest_number.c* so that it correctly prints out the largest of three numbers, no matter the case:
 
-carrie@ubuntu:/debugging$ ./1-main
+- Line count will not be checked for this task.
 
-Infinite loop incoming :(
-
-Infinite loop avoided! \o/
-
-carrie@ubuntu:/debugging$ wc -l 1-main.c
-24 1-main.c
-
-carrie@ubuntu:/debugging$
-''' 
