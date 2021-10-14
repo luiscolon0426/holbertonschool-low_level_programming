@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *strncat - appends src to the dest string
+ * _strncat - appends src to the dest string
  * @dest: string to
  * @src: source string
  * @n: number of bytes to print
@@ -25,5 +25,5 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 		j++;
 	}
-	return(dest);
+	return (dest);
 }
