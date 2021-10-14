@@ -3,6 +3,10 @@
 /**
  * *strncat - appends src to the dest string
  * @dest: string to 
+ * @src: source string
+ * @n: number of bytes to print
+ * 
+ * Return: destinations string
  *
  */
 char *_strncat(char *dest, char *src, int n)
