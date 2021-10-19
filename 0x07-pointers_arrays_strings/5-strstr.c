@@ -1,4 +1,4 @@
-#include "main.h"
+\n#include "main.h"
 
 /**
  * _strstr - finds the first occurrences of the substriing
