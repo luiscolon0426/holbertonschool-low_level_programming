@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		return (1);
-
 	}
 	/**
 	 * atoi converts a string into an int
