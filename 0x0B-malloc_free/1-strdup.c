@@ -4,32 +4,42 @@
 /**
  * _strdup - returns a  pointer to newly allocated
  * spaces in memory that copies string given as a parameter.
- * @str: points to the string.
+ * @str: string tp be duplicated.
  *
  * Return: characters.
  */
 char *_strdup(char *str)
 {
-	int index, index2;
-	char *n;
+	unsigned int i;
+	char *s;
+	unsigned int len;
 
+	len = 0;
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (index = 0; str[index] != '\0'; index++)
+	while (str[len] != '\0')
+	{
+		len++;
+	}
 
-		n = malloc((index + 1) * sizeof(char));
-
-	if (n == NULL)
+	s = malloc((len + 1) * sizeof(char));
+	if (s == NULL)
 	{
 		return (NULL);
 	}
-	for (index2 = 0; index2 < index; index2++)
+
+
+	i = 0;
+	while (i < len)
 	{
-		n[index2] = str[index2];
+		s[i] = str[i];
+		i++;
 	}
-	n[index2] = '\0';
-	return (n);
+	s[i] = '\0';
+
+	return (s);
+
 
 }
