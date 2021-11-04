@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 /**
  * main - recieves basic calculations arguments
  * @argc: argument count

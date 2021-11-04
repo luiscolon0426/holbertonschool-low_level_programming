@@ -1,6 +1,5 @@
-#include "calc.h"
+#include "3-calc.h"
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -25,7 +24,6 @@ int (*get_op_func(char *s))(int, int)
 		if ((*ops[i].op) == *s)
 		{
 			return (ops[i].f);
-
 		}
 		i++;
 	}
