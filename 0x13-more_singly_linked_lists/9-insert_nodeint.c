@@ -38,6 +38,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	new->next = (tmp)->next;
 	tmp->next = new;
+	if (idx > i)
+	{
+		return (NULL);
+	}
 
 	return (new);
 }
