@@ -7,5 +7,6 @@
 •What is a prototype  
 •Scope of variables  
 •What are header files and how to use them with #include  
-•What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89  
+•What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
+ 
 
