@@ -1,7 +1,9 @@
+**Learning Objectives**
 
-0x0B. C - malloc, free
+- What is the difference between automatic and dynamic allocation.
 
-This repository has tasks that explore the basics of malloc() and free(),
-and how to implement them, and in which situations should malloc() should be used or not.
+- What is ```malloc()``` and ```free()``` and how to use them.
 
-Additionally, this respository contains a main.h header file filled with function prototypes that will be used in the various tasks.
+- Why and when use ```malloc()```.
+
+- How to use valgrind to check for memory leak.
