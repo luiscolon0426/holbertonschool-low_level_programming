@@ -1,4 +1,5 @@
 #include "main.h"
+int main(int argc, char *argv[]);
 /**
  * main - program taht copies the content of a file to
  * another file
