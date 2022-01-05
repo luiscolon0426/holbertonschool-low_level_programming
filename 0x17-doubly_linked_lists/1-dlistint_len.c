@@ -1,21 +1,17 @@
 #include "lists.h"
 /**
- *
- *
- * */
+ * dlistint_len - prints list
+ * @h:head of list
+ * Return: lenght of list
+ */
 size_t dlistint_len(const dlistint_t *h)
 {
-	int a;
+	size_t i = 0;
 
-	if (h == 0)
-	{
-		return (0);
-	}
-	a = 0;
 	while (h)
 	{
 		h = h->next;
-		a++;
+		i++;
 	}
-	return (a);
+	return (i);
 }
