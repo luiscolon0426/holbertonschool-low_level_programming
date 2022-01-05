@@ -1,42 +1,39 @@
 #include "lists.h"
+
 /**
- * delete_dnodeint_at_index - delete node at index
- * @head: head of list
- * @index: index of list
- *
- * Return: 1 if success, -1 if fails
- **/
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+ * delete_nodeint_at_index - delete node at index
+ * @head: head
+ * @index: location of node to delete
+ * Return: -1 if fail 1 if succ
+ */
+int delete_nodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *new = *head, *tmp;
-	unsigned int count;
+	dlistint_t *newn, *cur;
+	unsigned int i;
 
-	if (!head || !*head)
-	{
-		return (-1);
-	}
-	tmp = *head;
+	i = 0;
+	newn = *head;
 
-	for (count = 1; tmp != NULL && count != index; count++)
-	{
-		tmp = tmp->next;
-	}
-	if (index > count)
-	{
+	if (*head == NULL)
 		return (-1);
-	}
+
 	if (index == 0)
 	{
-		*head = new->next;
-		free(new);
+		*head = newn->next;
+		free(newn);
 		return (1);
 	}
-	else
+	while (i != index)
 	{
-		new = tmp->next;
-		tmp->next = new->next;
-		free(new);
-		return (1);
+		cur = newn;
+		newn = newn->next;
+		if (newn == NULL)
+			return (-1);
+		i++;
 	}
-	return (-1);
+
+	cur->next = newn->next;
+	free(newn);
+	return (1);
 }
+
