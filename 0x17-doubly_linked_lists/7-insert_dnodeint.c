@@ -1,42 +1,43 @@
 #include "lists.h"
+
 /**
- * insert_dnodeint_at_index - insert new node
- * @h: head of list
- * @idx: index of list
- * @n: node to insert
+ * get_dnodeint_at_index - finds the node at the given index
+ * @head: beggining of list
+ * @index: number of link to find
+ * Return: the searched for node
  *
- * Return: node to insert
- **/
+ */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node, *tmp;
-	unsigned int count;
+	dlistint_t *node, *new;
+	unsigned int i;
 
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
-	{
+	new = malloc(sizeof(dlistint_t));
+	if (!new)
 		return (NULL);
-	}
-	new_node->n = n;
-	tmp = *h;
+	new->n = n;
+	new->next = NULL;
+	new->prev = NULL;
+	i = 0;
+	node = *h;
 
-	for (count = 1; tmp != NULL && count != idx; count++)
-	{
-		tmp = tmp->next;
-	}
-	if (idx > count)
-	{
-		return (NULL);
-	}
 	if (idx == 0)
 	{
-		new_node->next = *h;
-		*h = new_node;
+		new->next = node;
+		node->prev = new;
+		*h = new;
+		return (new);
 	}
-	else
+	while (i + 1 < idx)
 	{
-		new_node->next = tmp->next;
-		tmp->next = new_node;
+		node = node->next;
+		i++;
 	}
-	return (new_node);
+	node->next->prev = new;
+	new->next = node->next;
+	node->next = new;
+	new->prev = node;
+
+	return (new);
+
 }
