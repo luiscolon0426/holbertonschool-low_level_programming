@@ -1,39 +1,43 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - delete node at index
- * @head: head
- * @index: location of node to delete
- * Return: -1 if fail 1 if succ
+ * delete_dnodeint_at_index - deletes the node at a given position
+ * @head: the first element of a linked list
+ * @index: the index of the list where new node should be added
+ *
+ * Return: 1 if it succeeded, -1 if it failed
  */
-int delete_nodeint_at_index(dlistint_t **head, unsigned int index)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *newn, *cur;
-	unsigned int i;
-
-	i = 0;
-	newn = *head;
+	unsigned int currentIndex;
+	dlistint_t *tmpHead;
+	dlistint_t *tmpPrev;
 
 	if (*head == NULL)
 		return (-1);
 
-	if (index == 0)
+	tmpHead = *head;
+	for (currentIndex = 0; currentIndex < index; currentIndex++)
 	{
-		*head = newn->next;
-		free(newn);
+		tmpHead = tmpHead->next;
+		if (tmpHead == NULL)
+			return (-1);
+	}
+
+	if (index > 0)
+	{
+		tmpPrev = *head;
+		for (currentIndex = 0; currentIndex < index - 1; currentIndex++)
+		{
+			tmpPrev = tmpPrev->next;
+		}
+
+		tmpPrev->next = tmpHead->next;
+		free(tmpHead);
 		return (1);
 	}
-	while (i != index)
-	{
-		cur = newn;
-		newn = newn->next;
-		if (newn == NULL)
-			return (-1);
-		i++;
-	}
 
-	cur->next = newn->next;
-	free(newn);
+	*head = (*head)->next;
+	free(tmpHead);
 	return (1);
 }
-
