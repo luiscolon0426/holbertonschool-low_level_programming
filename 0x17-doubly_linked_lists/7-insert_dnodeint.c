@@ -1,9 +1,10 @@
 #include "lists.h"
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 
 /**
  * get_dnodeint_at_index - finds the node at the given index
- * @head: beggining of list
- * @index: number of link to find
+ * @h: beggining of list
+ * @idx: number of link to find
  * Return: the searched for node
  *
  */
