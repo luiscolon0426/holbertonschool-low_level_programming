@@ -2,7 +2,7 @@
 In this repository you will find the projects related to low-level programming that I had to do in Holberton.
 
 ## Projects
-Here is the list of all the projects, each one has its description in its respective folder.
+Here is the list of all the projects, each one has its description in its respective folder..
 
 * [0x00. C - Hello, World](https://github.com/luiscolon0426/holbertonschool-low_level_programming/tree/master/0x00-hello_world)
 * [0x01. C - Variables, if, else, while](https://github.com/luiscolon0426/holbertonschool-low_level_programming/tree/master/0x01-variables_if_else_while)
