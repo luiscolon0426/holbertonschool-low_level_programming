@@ -1,3 +1,4 @@
+int binary_search(int *array, size_t size, int value);
 #include "search_algos.h"
 
 /**
@@ -11,7 +12,8 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t left = 0, right = size - 1;
+	size_t left = 0;
+	size_t right = size - 1;
 	size_t index1, index2;
 
 	if (array == NULL)
