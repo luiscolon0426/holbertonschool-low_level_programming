@@ -1,7 +1,7 @@
 CC = gcc
-SRC = main.c holberton.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-NAME = holberton
+NAME = school
 RM = rm -f
 
 all: $(OBJ)
@@ -11,5 +11,6 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 fclean: clean oclean
-
-re: oclean all
+re:
+	${RM} *.so 
+	${RM} *.o
