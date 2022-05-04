@@ -5,7 +5,6 @@
  * @array: parameter
  * @size: parameter
  * @value: parameter
- * @int: parameter
  * Return: value or -1
  */
 
